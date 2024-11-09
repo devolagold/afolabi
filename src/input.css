@@ -86,3 +86,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button-bg{
+  background-image: url(assets/button-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
