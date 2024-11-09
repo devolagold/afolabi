@@ -13,15 +13,28 @@
     </div>
 
     <nav class="bg-* fixed w-full z-20 top-0 start-0 dark:border-gray-600">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 pt-4">
             <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="src/assets/Logo.svg" class="h-6" alt="Flowbite Logo">
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <div class="flex">
+                <div class="flex space-x-2">
+                    <button type="button" class="md:flex bg-[#FDFDF8] text-[#0A0A0C] hidden items-center space-x-2 rounded-full text-sm px-6 py-2 text-center hover:opacity-85 button-bg">
+                        <p>Resume</p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="5" fill="url(#paint0_linear_558_1518)" fill-opacity="0.45"/>
+                            <path d="M8.97354 7.77H11.8465C12.8172 7.77 13.5842 8.017 14.1475 8.511C14.7109 9.005 14.9925 9.67667 14.9925 10.526C14.9925 11.0547 14.8495 11.514 14.5635 11.904C14.2775 12.294 13.9179 12.567 13.4845 12.723C13.9265 12.8097 14.2559 12.983 14.4725 13.243C14.6892 13.503 14.8192 13.88 14.8625 14.374L15.0965 17H13.7965L13.5885 14.556C13.5452 14.1227 13.4022 13.815 13.1595 13.633C12.9255 13.4423 12.5485 13.347 12.0285 13.347H10.2475V17H8.97354V7.77ZM11.8205 12.151C12.4012 12.151 12.8519 12.0123 13.1725 11.735C13.5019 11.4577 13.6665 11.0677 13.6665 10.565C13.6665 10.0623 13.5019 9.67233 13.1725 9.395C12.8519 9.109 12.4012 8.966 11.8205 8.966H10.2475V12.151H11.8205Z" fill="#FDFDF8" fill-opacity="0.8"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_558_1518" x1="12" y1="0" x2="12" y2="24" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#070707"/>
+                            <stop offset="1" stop-color="#070707" stop-opacity="0.8"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>                                                  
+                    </button>
                     <button type="button" class="bg-[#0EA5E9] text-white flex items-center space-x-2 rounded-full text-sm px-6 py-2 text-center hover:opacity-85 button-bg">
                         <p>Work with me</p> 
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="md:flex hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="24" height="24" rx="5" fill="#070707" fill-opacity="0.3"/>
                             <path d="M8.57054 7.77H9.89654L10.5205 15.18L11.4305 8.81H12.5745L13.4845 15.18L14.1085 7.77H15.4345L14.5245 17H12.8085L12.0025 11.423L11.1965 17H9.48054L8.57054 7.77Z" fill="#FDFDF8" fill-opacity="0.8"/>
                         </svg>                        
@@ -35,20 +48,22 @@
                 </button>
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font- rounded-lg md:space-x-8 md:flex-row md:mt-0 bg-slate-600">
+                <ul class="absolute w-full flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-[#ffffff2c] md:dark:bg-transparent backdrop-blur-md">
                     <li>
-                    <a href="#" class="block py-2 px-3 text-[#FDFDF8] hover:text-[#0EA5E9]">Projects</a>
+                    <a href="#" class="block py-2 px-3 w-auto text-[#FDFDF8] hover:text-[#0EA5E9]">Projects</a>
                     </li>
                     <li>
-                    <a href="#" class="block py-2 px-3 text-[#FDFDF8] hover:text-[#0EA5E9]">Benefits</a>
+                    <a href="#" class="block py-2 px-3 w-auto text-[#FDFDF8] hover:text-[#0EA5E9]">Benefits</a>
                     </li>
                     <li>
-                    <a href="#" class="block py-2 px-3 text-[#FDFDF8] hover:text-[#0EA5E9]">About</a>
+                    <a href="#" class="block py-2 px-3 w-auto text-[#FDFDF8] hover:text-[#0EA5E9]">About</a>
                     </li>
                 </ul>
             </div>
         </div>
+        <div class="border-line opacity-20"></div>
   </nav>
+
 
 </body>
 </html>
