@@ -7,7 +7,6 @@
     <link rel="icon" href="src/assets/favicon.png"/>
     <script defer src="src/assets/flowbite.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
-    <script src="src/assets/main.js"></script>
     <title>afọlábí - Creative Product Designer</title>
 </head>
 <body class="bg-[#0A0A0C]">
@@ -73,7 +72,7 @@
     <!-- Hero Section -->
     <div class="max-w-screen-xl w-full mx-auto md:px-16 px-4 mt-14 md:mt-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
-            <div class="flex flex-col space-y-3 md:space-y-4 col-span-1">
+            <div class="flex flex-col space-y-3 md:space-y-6 col-span-1">
                 <div class="flex items-center text-xs md:text-sm text-[#FDFDF8] space-x-1 md:space-x-2">
                     <svg class="w-[6px] md:w-[8px] h-[6px] md:h-[8px]" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="8" height="8" rx="4" fill="#16A34A"/>
@@ -88,7 +87,7 @@
                     <span class="opacity-0 text-[#0EA5E9] font-extrabold geist-mono">‘ideas’</span>
                     <span class="opacity-0">into design</span>
                       </h1>
-                <p class="md:text-[18px] md:leading-7 text-sm text-[#9392A1]">
+                <p class="hero-paragraph opacity-100 md:text-[18px] md:leading-7 text-sm text-[#9392A1]">
                     I’m <span class="font-medium text-[#E3E5E8]">Afolabi Olamilekan</span>, a Nigerian product designer with over 2+ years of experience. I specialize in
                     <span class="font-medium text-[#E3E5E8]">creating impactful user interfaces</span>
                     that meet user needs and business objectives.
@@ -101,19 +100,12 @@
                     </svg>                                                
                 </button>
             </div>
-            <div class="col-span-1">
+            <div class="col-span-1 hero-image">
                 <img src="src/assets/hero-image.png" alt="">
             </div>
         </div>
     </div>
 
-    <script>
-        gsap.to(".hero-text span", {
-            opacity: 1,              // Fade to full opacity
-            duration: 2,             // Animation duration for each word
-            ease: "circ.inOut",
-            stagger: 0.2             // Time delay between each word's fade-in
-        });
-    </script>
+    <script src="src/assets/main.js"></script>
 </body>
 </html>
