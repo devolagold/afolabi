@@ -17,6 +17,6 @@ gsap.from(".hero-paragraph", {
 gsap.from(".hero-image", {
     opacity: 0,             // Fade in effect
     filter: "blur(10px)",   // Start with blur
-    duration: 1.5,          // Adjust duration for effect timing
+    duration: 2.5,          // Adjust duration for effect timing
     ease: "power2.out"      // Smooth easing
 });
