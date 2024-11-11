@@ -1243,6 +1243,10 @@ video {
     margin-top: 4rem;
   }
 
+  .md\:mt-12{
+    margin-top: 3rem;
+  }
+
   .md\:block{
     display: block;
   }
