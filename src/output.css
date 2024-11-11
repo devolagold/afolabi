@@ -1079,6 +1079,18 @@ video {
   line-height: 1.5rem;
 }
 
+.leading-tight{
+  line-height: 1.25;
+}
+
+.leading-8{
+  line-height: 2rem;
+}
+
+.leading-10{
+  line-height: 2.5rem;
+}
+
 .tracking-tight{
   letter-spacing: -0.025em;
 }
@@ -1408,6 +1420,34 @@ video {
 
   .md\:leading-7{
     line-height: 1.75rem;
+  }
+
+  .md\:leading-5{
+    line-height: 1.25rem;
+  }
+
+  .md\:leading-9{
+    line-height: 2.25rem;
+  }
+
+  .md\:leading-10{
+    line-height: 2.5rem;
+  }
+
+  .md\:leading-tight{
+    line-height: 1.25;
+  }
+
+  .md\:leading-snug{
+    line-height: 1.375;
+  }
+
+  .md\:leading-relaxed{
+    line-height: 1.625;
+  }
+
+  .md\:leading-none{
+    line-height: 1;
   }
 
   .md\:opacity-40{
