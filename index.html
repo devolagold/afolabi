@@ -17,7 +17,7 @@
     </div>
     
     <!-- Navigation Bar -->
-    <nav class="bg-* fixed w-full z-20 top-0 start-0 dark:border-gray-600">
+    <nav class="bg-* fixe w-full z-20 top-0 start-0 dark:border-gray-600">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto md:px-16 px-4 pt-4">
             <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="src/assets/Logo.svg" class="h-6" alt="Flowbite Logo">
@@ -56,13 +56,13 @@
                 <div class="absolute top-28 items-center justify-between hidden md:block w-fu md:w-auto md:order-1 md:relative md:top-1" id="navbar-sticky">
                     <ul class="w-fit ml-auto -mt-8 flex flex-col p-2 md:p-0 rounded-lg bg-[#3536371c] md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-[#3536371c] md:dark:bg-transparent backdrop-blur-lg">
                         <li>
-                        <a href="#" class="block py-1.5 px-2 font-light pr-6 text-sm w-auto text-[#FDFDF8] hover:text-[#0EA5E9]">Projects</a>
+                        <a href="#" class="block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">Projects</a>
                         </li>
                         <li>
-                        <a href="#" class="block py-1.5 px-2 font-light pr-6 text-sm w-auto text-[#FDFDF8] hover:text-[#0EA5E9]">Benefits</a>
+                        <a href="#" class="block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">Benefits</a>
                         </li>
                         <li>
-                        <a href="#" class="block py-1.5 px-2 font-light pr-6 text-sm w-auto text-[#FDFDF8] hover:text-[#0EA5E9]">About</a>
+                        <a href="#" class="block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">About</a>
                         </li>
                     </ul>
                 </div>
@@ -72,10 +72,31 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="w-full mx-auto md:px-16 px-4 mt-28">
-        <div class="flex">
-            <div class="flex">
-                <h1 class="md:text-5xl leading-3 tracking-tight font-bold text-[#FDFDF8]">Creative product <br> designer transforming <br> <span class="text-[#0EA5E9] geist-mono">‘ideas’</span> into design </h1>
+    <div class="max-w-screen-xl w-full mx-auto md:px-16 px-4 mt-14 md:mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+            <div class="flex flex-col space-y-3 md:space-y-4 col-span-1">
+                <div class="flex items-center text-xs md:text-sm text-[#FDFDF8] space-x-1 md:space-x-2">
+                    <svg class="w-[6px] md:w-[8px] h-[6px] md:h-[8px]" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="8" height="8" rx="4" fill="#16A34A"/>
+                    </svg>                        
+                    <p>Available for work</p>
+                </div>
+                <h1 class="md:text-5xl text-3xl md:leading- tracking-tight font-bold text-[#FDFDF8]">Creative product <br> designer transforming <br> <span class="text-[#0EA5E9] font-extrabold geist-mono">‘ideas’</span> into design </h1>
+                <p class="md:text-[18px] md:leading-7 text-sm text-[#9392A1]">
+                    I’m <span class="font-medium text-[#E3E5E8]">Afolabi Olamilekan</span>, a Nigerian product designer with over 2+ years of experience. I specialize in
+                    <span class="font-medium text-[#E3E5E8]">creating impactful user interfaces</span>
+                    that meet user needs and business objectives.
+                </p>
+                <button type="button" class="w-fit font-medium bg-[#0EA5E9] text-white flex items-center space-x-2 rounded-full text-sm px-6 py-2 text-center hover:opacity-85 button-bg">
+                    <p>Reach out via mail</p> 
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" rx="5" fill="#070707" fill-opacity="0.3"/>
+                        <path d="M9.98754 9.278L10.1045 9.265V17H8.83054V7.77H10.6505L12.2625 15.011H11.7425L13.3545 7.77H15.1745V17H13.9005V9.265L14.0175 9.278L12.5225 15.96H11.4825L9.98754 9.278Z" fill="#FDFDF8" fill-opacity="0.8"/>
+                    </svg>                                                
+                </button>
+            </div>
+            <div class="col-span-1">
+                <img src="src/assets/hero-image.png" alt="">
             </div>
         </div>
     </div>
