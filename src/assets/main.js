@@ -7,16 +7,26 @@ gsap.to(".hero-text span", {
 
 
 gsap.from(".hero-paragraph", {
-    opacity: 0,    // Fade to full opacity
-    duration: 12,   // Animation duration in seconds
-    ease: "power2.out",  // Smooth easing effect
+    opacity: 0, 
+    duration: 12,
+    ease: "power2.out", 
     delay: 0.2
 });
 
 
 gsap.from(".hero-image", {
-    opacity: 0,             // Fade in effect
-    filter: "blur(10px)",   // Start with blur
-    duration: 2.5,          // Adjust duration for effect timing
-    ease: "power2.out"      // Smooth easing
+    opacity: 0,
+    filter: "blur(10px)", 
+    duration: 2.5,  
+    ease: "power2.out" 
 });
+
+const button = document.querySelector(".btn");
+
+button.addEventListener("mouseenter", () => {
+    gsap.to(button, { boxShadow: "0 0 15px rgba(52, 152, 219, 0.5)", duration: 0.6 });
+  });
+  
+  button.addEventListener("mouseleave", () => {
+    gsap.to(button, { boxShadow: "0 0 5px rgba(0, 0, 0, 0)", duration: 1.6 });
+  });
