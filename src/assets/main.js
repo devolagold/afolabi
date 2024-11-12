@@ -30,3 +30,14 @@ button.addEventListener("mouseenter", () => {
   button.addEventListener("mouseleave", () => {
     gsap.to(button, { boxShadow: "0 0 5px rgba(0, 0, 0, 0)", duration: 1.6 });
   });
+
+  const button1 = document.querySelector(".btn1");
+
+button1.addEventListener("mouseenter", () => {
+    gsap.to(button1, { boxShadow: "0 0 25px rgba(52, 152, 219, 0.6)", duration: 0.6 });
+  });
+  
+  button1.addEventListener("mouseleave", () => {
+    gsap.to(button1, { boxShadow: "0 0 5px rgba(0, 0, 0, 0)", duration: 1.6 });
+  });
+
