@@ -47,6 +47,20 @@
     width: 100%;
 }
 
+.bento-1-bg{
+    background-image: url(assets/bento-1-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bento-2-bg{
+    background-image: url(assets/bento-2-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 @media (min-width: 768px){
     .marquee__inner img {

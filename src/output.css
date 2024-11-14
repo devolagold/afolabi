@@ -671,13 +671,18 @@ video {
   grid-column: span 1 / span 1;
 }
 
-.col-span-2{
-  grid-column: span 2 / span 2;
+.m-6{
+  margin: 1.5rem;
 }
 
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-14{
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .my-4{
@@ -690,9 +695,19 @@ video {
   margin-bottom: 2rem;
 }
 
-.my-12{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-8{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .-mt-8{
@@ -796,18 +811,6 @@ video {
   width: 100%;
 }
 
-.w-2{
-  width: 0.5rem;
-}
-
-.w-2\/3{
-  width: 66.666667%;
-}
-
-.w-1\/3{
-  width: 33.333333%;
-}
-
 .max-w-screen-xl{
   max-width: 1280px;
 }
@@ -872,14 +875,6 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-rows-2{
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
 .flex-col{
   flex-direction: column;
 }
@@ -920,12 +915,12 @@ video {
   gap: 0.5rem;
 }
 
-.gap-8{
-  gap: 2rem;
-}
-
 .gap-4{
   gap: 1rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
@@ -962,28 +957,16 @@ video {
   overflow: hidden;
 }
 
+.rounded-\[16px\]{
+  border-radius: 16px;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
 
 .rounded-lg{
   border-radius: 0.5rem;
-}
-
-.rounded-xl{
-  border-radius: 0.75rem;
-}
-
-.rounded-\[24px\]{
-  border-radius: 24px;
-}
-
-.rounded-\[20px\]{
-  border-radius: 20px;
-}
-
-.rounded-\[16px\]{
-  border-radius: 16px;
 }
 
 .rounded-b-lg{
@@ -994,11 +977,6 @@ video {
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-}
-
-.rounded-l{
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
 }
 
 .border{
@@ -1049,6 +1027,11 @@ video {
   background-color: rgb(253 253 248 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1063,16 +1046,6 @@ video {
   background-color: rgb(17 24 39 / 0.5);
 }
 
-.bg-green-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.bg-red-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1080,11 +1053,6 @@ video {
 
 .bg-white\/50{
   background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-tr{
@@ -1194,6 +1162,10 @@ video {
 
 .font-normal{
   font-weight: 400;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .tracking-tight{
@@ -1343,6 +1315,20 @@ video {
   width: 100%;
 }
 
+.bento-1-bg{
+  background-image: url(assets/bento-1-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bento-2-bg{
+  background-image: url(assets/bento-2-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (min-width: 768px){
   .marquee__inner img {
     height: 40vh;
@@ -1447,6 +1433,14 @@ video {
     height: 8px;
   }
 
+  .md\:w-5\/12{
+    width: 41.666667%;
+  }
+
+  .md\:w-7\/12{
+    width: 58.333333%;
+  }
+
   .md\:w-\[8px\]{
     width: 8px;
   }
@@ -1458,50 +1452,6 @@ video {
   .md\:w-fit{
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .md\:w-1\/3{
-    width: 33.333333%;
-  }
-
-  .md\:w-2\/3{
-    width: 66.666667%;
-  }
-
-  .md\:w-2\/5{
-    width: 40%;
-  }
-
-  .md\:w-3\/5{
-    width: 60%;
-  }
-
-  .md\:w-4\/5{
-    width: 80%;
-  }
-
-  .md\:w-9\/12{
-    width: 75%;
-  }
-
-  .md\:w-3\/12{
-    width: 25%;
-  }
-
-  .md\:w-4\/12{
-    width: 33.333333%;
-  }
-
-  .md\:w-8\/12{
-    width: 66.666667%;
-  }
-
-  .md\:w-7\/12{
-    width: 58.333333%;
-  }
-
-  .md\:w-5\/12{
-    width: 41.666667%;
   }
 
   .md\:grid-cols-2{
