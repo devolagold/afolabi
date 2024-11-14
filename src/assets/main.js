@@ -5,15 +5,6 @@ gsap.to(".hero-text span", {
     stagger: 0.2
 });
 
-
-gsap.from(".hero-paragraph", {
-    opacity: 0, 
-    duration: 12,
-    ease: "power2.out", 
-    delay: 0.2
-});
-
-
 gsap.from(".hero-image", {
     opacity: 0,
     filter: "blur(10px)", 
@@ -45,11 +36,27 @@ button1.addEventListener("mouseenter", () => {
   const buton = document.querySelector(".buton");
   const buttonText = document.querySelector(".buton .text");
 
-  buton.addEventListener("mouseenter", () => {
-    gsap.to(buttonText, { x: -5, duration: 0.2, ease: "power2.out" });
-  });
+//   buton.addEventListener("mouseenter", () => {
+//     gsap.to(buttonText, { x: -5, duration: 0.2, ease: "power2.out" });
+//   });
   
-  buton.addEventListener("mouseleave", () => {
-    gsap.to(buttonText, { x: 0, duration: 0.2, ease: "power2.out" });
-  });
-  
+//   buton.addEventListener("mouseleave", () => {
+//     gsap.to(buttonText, { x: 0, duration: 0.2, ease: "power2.out" });
+//   });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(".project-section", {
+        opacity: 0,                  // Start fully transparent
+        y: 50,                       // Start slightly below its final position
+        duration: 1.2,               // Duration of the animation
+        ease: "power3.out",          // Smooth easing
+        scrollTrigger: {
+            trigger: ".project-section", // Element that triggers the animation
+            start: "top 80%",            // Start animation when the top of .project-section is at 80% of the viewport height
+            end: "top 50%",              // End the trigger when .project-section is at 50%
+            scrub: 1, 
+        }
+    });
+ 
