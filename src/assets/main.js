@@ -54,12 +54,12 @@ const marqueeAnimation = gsap.to(".marquee__inner", {
   xPercent: -50, // Adjust the percentage to control how far it scrolls
   ease: "linear",
   repeat: -1,
-  duration: 5 // Adjust duration to control speed
+  duration: 25 // Adjust duration to control speed
 });
 
 gsap.matchMedia().add("(max-width: 768px)", () => {
   // Adjust duration for smaller screens
-  marqueeAnimation.duration(15); // Faster on smaller screens
+  marqueeAnimation.duration(5); // Faster on smaller screens
 });
 
 gsap.matchMedia().add("(min-width: 769px)", () => {
@@ -71,7 +71,7 @@ gsap.to(".marquee__inner", {
   xPercent: -50,
   ease: "linear",
   repeat: -1,
-  duration: 55,
+  duration: 25,
   scrollTrigger: {
     trigger: ".marquee",
     start: "top bottom", // start animation when the marquee section is about to come into view
