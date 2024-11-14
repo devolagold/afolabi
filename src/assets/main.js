@@ -16,47 +16,79 @@ const button = document.querySelector(".btn");
 
 button.addEventListener("mouseenter", () => {
     gsap.to(button, { boxShadow: "0 0 15px rgba(52, 152, 219, 0.5)", duration: 0.6 });
-  });
-  
-  button.addEventListener("mouseleave", () => {
-    gsap.to(button, { boxShadow: "0 0 5px rgba(0, 0, 0, 0)", duration: 1.6 });
-  });
+});
 
-  const button1 = document.querySelector(".btn1");
+button.addEventListener("mouseleave", () => {
+    gsap.to(button, { boxShadow: "0 0 5px rgba(0, 0, 0, 0)", duration: 1.6 });
+});
+
+const button1 = document.querySelector(".btn1");
 
 button1.addEventListener("mouseenter", () => {
     gsap.to(button1, { boxShadow: "0 0 25px rgba(52, 152, 219, 0.6)", duration: 0.6 });
-  });
-  
-  button1.addEventListener("mouseleave", () => {
+});
+
+button1.addEventListener("mouseleave", () => {
     gsap.to(button1, { boxShadow: "0 0 5px rgba(0, 0, 0, 0)", duration: 1.6 });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".project-section").forEach((card, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: i * 0.2, // Adds a delay for each card to stagger the animation
+      scrollTrigger: {
+        trigger: card,
+        start: "top 80%", // Triggers when card reaches 80% from the top of the viewport
+        toggleActions: "play none none none", // Plays animation on scroll
+      },
+    });
   });
 
+gsap.registerPlugin(ScrollTrigger); // register ScrollTrigger if you want to control it on scroll
 
-  const buton = document.querySelector(".buton");
-  const buttonText = document.querySelector(".buton .text");
+const marqueeAnimation = gsap.to(".marquee__inner", {
+  xPercent: -50, // Adjust the percentage to control how far it scrolls
+  ease: "linear",
+  repeat: -1,
+  duration: 5 // Adjust duration to control speed
+});
 
-//   buton.addEventListener("mouseenter", () => {
-//     gsap.to(buttonText, { x: -5, duration: 0.2, ease: "power2.out" });
-//   });
-  
-//   buton.addEventListener("mouseleave", () => {
-//     gsap.to(buttonText, { x: 0, duration: 0.2, ease: "power2.out" });
-//   });
+gsap.matchMedia().add("(max-width: 768px)", () => {
+  // Adjust duration for smaller screens
+  marqueeAnimation.duration(15); // Faster on smaller screens
+});
 
+gsap.matchMedia().add("(min-width: 769px)", () => {
+  // Adjust duration for larger screens
+  marqueeAnimation.duration(20); // Slower on larger screens
+});
 
-    gsap.registerPlugin(ScrollTrigger);
+gsap.to(".marquee__inner", {
+  xPercent: -50,
+  ease: "linear",
+  repeat: -1,
+  duration: 55,
+  scrollTrigger: {
+    trigger: ".marquee",
+    start: "top bottom", // start animation when the marquee section is about to come into view
+    end: "bottom top", // end animation when marquee section leaves view
+    scrub: true // smooth scrolling control
+  }
+});
 
-      gsap.from(".project-section", {
-        opacity: 0,                  // Start fully transparent
-        y: 50,                       // Start slightly below its final position
-        duration: 1.2,               // Duration of the animation
-        ease: "power3.out",          // Smooth easing
-        scrollTrigger: {
-            trigger: ".project-section", // Element that triggers the animation
-            start: "top 80%",            // Start animation when the top of .project-section is at 80% of the viewport height
-            end: "top 50%",              // End the trigger when .project-section is at 50%
-            scrub: 1, 
-        }
-    });
- 
+// Select all images within the marquee
+const images = document.querySelectorAll(".marquee__inner img");
+
+// Add hover event listeners to each image
+images.forEach(image => {
+  image.addEventListener("mouseenter", () => {
+    marqueeAnimation.pause(); // Pause animation on hover
+  });
+  image.addEventListener("mouseleave", () => {
+    marqueeAnimation.resume(); // Resume animation when hover ends
+  });
+});

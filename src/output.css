@@ -676,8 +676,17 @@ video {
   margin-right: auto;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .-mt-8{
   margin-top: -2rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
 }
 
 .ml-auto{
@@ -694,10 +703,6 @@ video {
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
 }
 
 .block{
@@ -1242,6 +1247,32 @@ video {
 
 .geist-mono{
   font-family: 'Geist Mono';
+}
+
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.marquee__inner {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.marquee__inner img {
+  height: 300px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .marquee__inner img {
+    height: 40vh;
+  }
 }
 
 .hover\:border-gray-300:hover{
