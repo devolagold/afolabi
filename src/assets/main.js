@@ -92,3 +92,87 @@ images.forEach(image => {
     marqueeAnimation.resume(); // Resume animation when hover ends
   });
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Select all the cards
+const cards = document.querySelectorAll('.card');
+
+// Loop through each card to create an individual ScrollTrigger for sequential animation
+cards.forEach((card, index) => {
+  // Create a timeline for each card
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",
+      end: 'top 5%',
+      scrub: true
+    }
+  });
+
+  // Animate the SVG illustration with a smooth fade-in
+  tl.from(card.querySelector(".card-illustration"), {
+    opacity: 0,
+    x: -20,          // Slight upward movement
+    duration: 0.6,
+    ease: "power2.out",
+  })
+  .from(card.querySelector(".card-heading"), {
+    opacity: 0,
+    y: 10,          // Slight downward movement
+    duration: 0.4,
+    ease: "power2.out",
+  }, "-=0.3")        // Overlap with previous animation
+  .from(card.querySelector(".card-text"), {
+    opacity: 0,
+    y: 10,
+    duration: 0.4,
+    ease: "power2.out",
+  }, "-=0.2");      // Overlap with previous animation
+
+  // Add a stagger delay between each card animation
+  gsap.delayedCall(index * 0.3, () => tl.play());
+});
+
+
+
+// Function to handle the glow effect
+function handleCardHover() {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach((card) => {
+    const glow = card.querySelector('.glow');
+
+    // Set the glow color based on the card's data attribute
+    const glowColor = card.dataset.glowColor;
+    glow.style.background = `radial-gradient(circle, ${glowColor} 0%, transparent 60%)`;
+
+    // Mouse enter event: make the glow visible
+    card.addEventListener('mouseenter', () => {
+      gsap.to(glow, { opacity: 0.5, duration: 0.3 });
+    });
+
+    // Mouse move event: move the glow to follow the cursor
+    card.addEventListener('mousemove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      gsap.to(glow, {
+        x: x - glow.offsetWidth / 2,
+        y: y - glow.offsetHeight / 2,
+        duration: 0.6,
+        ease: 'power2.out',
+      });
+    });
+
+    // Mouse leave event: fade out the glow
+    card.addEventListener('mouseleave', () => {
+      gsap.to(glow, { opacity: 0, duration: 0.3 });
+    });
+  });
+}
+
+// Initialize the glow effect on cards
+handleCardHover();
