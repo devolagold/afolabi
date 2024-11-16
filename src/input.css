@@ -4,6 +4,7 @@
     font-family: 'Geist';
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth
 }
 
 @tailwind base;
@@ -73,6 +74,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.cta-bg{
+  background-image: url(assets/cta-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .glow {
