@@ -1,3 +1,14 @@
+
+   document.addEventListener("keydown", function(event) {
+    if (event.key === "m" || event.key === "M") {
+      document.getElementById("hiddenLinkM").click();
+    }
+
+    if (event.key === "r" || event.key === "R") {
+        document.getElementById("hiddenLinkR").click();
+      }
+  });
+
 gsap.to(".hero-text span", {
     opacity: 1,
     duration: 2,
@@ -92,3 +103,19 @@ images.forEach(image => {
     marqueeAnimation.resume(); // Resume animation when hover ends
   });
 });
+
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent the default anchor behavior
+
+      const targetId = this.getAttribute('href'); // Get the target section ID
+      const targetElement = document.querySelector(targetId); // Select the target section
+
+      gsap.to(window, {
+        duration: 1, // Smooth scroll duration in seconds
+        scrollTo: targetElement, // Scroll to the target element
+        ease: 'power2.inOut' // Easing function for smoothness
+      });
+    });
+  });

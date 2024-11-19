@@ -8,6 +8,7 @@
     <script defer src="src/assets/flowbite.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <title>afọlábí - Creative Product Designer</title>
 </head>
 <body class="bg-[#0A0A0C]">
@@ -24,7 +25,7 @@
             <div class="flex">
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <div class="flex space-x-2">
-                        <a href="#" type="button" class="font-medium md:flex bg-[#FDFDF8] text-[#0A0A0C] hidden items-center space-x-2 rounded-full text-sm px-6 py-2 text-center hover:opacity-85 button-">
+                        <a id="hiddenLinkR" href="https://www.example.com" type="button" class="font-medium md:flex bg-[#FDFDF8] text-[#0A0A0C] hidden items-center space-x-2 rounded-full text-sm px-6 py-2 text-center hover:opacity-85 button-">
                             <p class="font-medium">Resume</p>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="24" height="24" rx="5" fill="url(#paint0_linear_558_1518)" fill-opacity="0.45"/>
@@ -55,13 +56,13 @@
                 <div class="absolute top-28 items-center justify-between hidden md:block w-fu md:w-auto md:order-1 md:relative md:top-1" id="navbar-sticky">
                     <ul class="w-fit ml-auto -mt-8 flex flex-col p-2 md:p-0 rounded-lg bg-[#3536371c] md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-[#3536371c] md:dark:bg-transparent backdrop-blur-lg">
                         <li>
-                        <a href="#" class="block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">Projects</a>
+                        <a href="#Projects" class="nav-link block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">Projects</a>
                         </li>
                         <li>
-                        <a href="#" class="block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">Benefits</a>
+                        <a href="#Benefits" class="nav-link block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">Benefits</a>
                         </li>
                         <li>
-                        <a href="#" class="block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">About</a>
+                        <a href="about.html" class="block py-1.5 px-2 font-normal pr-16 md:pr-6 text-sm w-44 md:w-fit text-[#FDFDF8] hover:text-[#0EA5E9]">About</a>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +81,7 @@
                     </svg>                        
                     <p>Available for work</p>
                 </div>
-                <h1 class="hero-text md:leading-none md:text-5xl text-3xl tracking-tight font-bold text-[#FDFDF8]">
+                <h1 class="hero-text leading-tight md:text-5xl text-3xl tracking-tight font-bold text-[#FDFDF8]">
                     <span class="opacity-0">Creative</span>
                     <span class="opacity-0">product</span>
                     <span class="opacity-0"><br> designer</span>
@@ -93,7 +94,7 @@
                     <span class="font-medium text-[#E3E5E8]">creating impactful user interfaces</span>
                     that meet user needs and business objectives.
                 </p>
-                <a href="#" type="button" class="btn hero-image w-fit font-medium bg-[#0EA5E9] text-white flex items-center space-x-2 rounded-full text-sm px-6 py-2.5 text-center hover:opacity-85 button-bg">
+                <a id="hiddenLinkM" href="https://www.example.com" type="button" class="btn hero-image w-fit font-medium bg-[#0EA5E9] text-white flex items-center space-x-2 rounded-full text-sm px-6 py-2.5 text-center hover:opacity-85 button-bg">
                     <p class="text">Reach out via mail</p> 
                     <svg class="md:flex hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="24" height="24" rx="5" fill="#070707" fill-opacity="0.3"/>
@@ -108,7 +109,7 @@
     </div>
 
     <!-- Project Section -->
-    <div class="max-w-screen-xl w-full mx-auto md:px-16 px-4 mt-14 md:mt-24">
+    <div id="Projects" class="max-w-screen-xl w-full mx-auto md:px-16 px-4 mt-14 md:mt-24">
         <div class="flex flex-col">
             <div class="flex flex-col items-center space-y-2 text-center">
                 <h1 class="geist-mono text-sm md:text-base text-[#9392A1]">PROJECTS</h1>
@@ -295,7 +296,7 @@
     </div>
 
     <!-- Benefit Section -->
-    <div class="max-w-screen-xl w-full mx-auto md:px-16 px-4 my-14 md:mt-24">
+    <div id="Benefits" class="max-w-screen-xl w-full mx-auto md:px-16 px-4 my-14 md:mt-24">
         <div class="flex flex-col">
             <div class="flex flex-col items-center space-y-2 text-center">
                 <h1 class="geist-mono text-sm md:text-base text-[#9392A1]">BENEFITS</h1>
@@ -361,7 +362,7 @@
                 <p class="hero-image opacity-100 md:text-[18px] md:leading-7 text-sm text-[#9392A1]">
                     Let’s create solutions that deliver value and exceed expectations.
                 </p>
-                <a href="#" type="button" class="btn hero-image w-fit font-medium bg-[#0EA5E9] text-white flex items-center space-x-2 rounded-full text-sm px-6 py-2.5 text-center hover:opacity-85 button-bg">
+                <a id="hiddenLinkM" href="https://www.example.com" type="button" class="btn hero-image w-fit font-medium bg-[#0EA5E9] text-white flex items-center space-x-2 rounded-full text-sm px-6 py-2.5 text-center hover:opacity-85 button-bg">
                     <p class="text">Reach out via mail</p> 
                     <svg class="md:flex hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="24" height="24" rx="5" fill="#070707" fill-opacity="0.3"/>
@@ -380,21 +381,37 @@
                 <div class="flex flex-col items-center space-y-2 md:space-y-4">
                     <h1 class="text-[#FDFDF8] font-medium md:text-2xl text-xl">Let's Connect</h1>
                     <div class="flex space-x-4 items-center justify-center flex-wrap">
-                        <a href="#" class="hover:opacity-80">
+                        <a href="#" class="hover:opacity-80 tooltip">
                             <p class="text-[#605A57] md:text-[18px] md:leading-7 text-sm">X(Twitter)</p>
+                            <span class="tooltip-content">
+                                <img src="src/assets/x_logo.png" 
+                                     alt="Twitter Logo">
+                            </span>
                         </a>
-                        <a href="#" class="hover:opacity-80">
+                        <a href="#" class="hover:opacity-80 tooltip">
                             <p class="text-[#605A57] md:text-[18px] md:leading-7 text-sm">LinkedIn</p>
+                            <span class="tooltip-content">
+                                <img src="src/assets/linkedin.png" 
+                                     alt="Twitter Logo">
+                            </span>
                         </a>
-                        <a href="#" class="hover:opacity-80">
+                        <a href="#" class="hover:opacity-80 tooltip">
                             <p class="text-[#605A57] md:text-[18px] md:leading-7 text-sm">Instagram</p>
+                            <span class="tooltip-content">
+                                <img src="src/assets/instagram.png" 
+                                     alt="Twitter Logo">
+                            </span>
                         </a>
-                        <a href="#" class="hover:opacity-80">
+                        <a href="#" class="hover:opacity-80 tooltip">
                             <p class="text-[#605A57] md:text-[18px] md:leading-7 text-sm">Behance</p>
+                            <span class="tooltip-content">
+                                <img src="src/assets/behance.png" 
+                                     alt="Twitter Logo">
+                            </span>
                         </a>
                     </div>
                 </div>
-                <h1 class="text-[#FDFDF8] md:text-base text-sm">© 2024 afọlábí, All rights reserved. | Designed and Built with 🤍 by Me 😎</h1>
+                <h1 class="text-[#FDFDF8] flex flex-col md:space-y-0 space-y-2 md:space-x-2 md:flex-row md:text-base text-sm"><span>© 2024 afọlábí, All rights reserved. </span> <span class="hidden md:block"> • </span> <span> Designed and Built with 🤍 by Me 😎</span></h1>
            </div>
         </div>
     </div>
