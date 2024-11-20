@@ -7,6 +7,10 @@
     if (event.key === "r" || event.key === "R") {
         document.getElementById("hiddenLinkR").click();
       }
+
+    if (event.key === "s" || event.key === "S") {
+      document.getElementById("hiddenLinkR").click();
+    }
   });
 
 gsap.to(".hero-text span", {
