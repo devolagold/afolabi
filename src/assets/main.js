@@ -4,12 +4,16 @@
       document.getElementById("hiddenLinkM").click();
     }
 
+    if (event.key === "w" || event.key === "W") {
+      document.getElementById("hiddenLinkW").click();
+    }
+
     if (event.key === "r" || event.key === "R") {
         document.getElementById("hiddenLinkR").click();
       }
 
     if (event.key === "s" || event.key === "S") {
-      document.getElementById("hiddenLinkR").click();
+      document.getElementById("hiddenLinkS").click();
     }
   });
 
