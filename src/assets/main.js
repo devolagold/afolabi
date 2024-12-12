@@ -61,7 +61,7 @@ gsap.utils.toArray(".project-section").forEach((card, i) => {
       delay: i * 0.2, // Adds a delay for each card to stagger the animation
       scrollTrigger: {
         trigger: card,
-        start: "top 80%", // Triggers when card reaches 80% from the top of the viewport
+        start: "top 90%", // Triggers when card reaches 80% from the top of the viewport
         toggleActions: "play none none none", // Plays animation on scroll
       },
     });
